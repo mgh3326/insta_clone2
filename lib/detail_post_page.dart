@@ -1,14 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class DetailPostPage extends StatelessWidget {
-  final document = {
-    'userPhotoUrl': '',
-    'email': 'test@test.com',
-    'displayName': '더미',
-  };
-//  final FirebaseUser user;
+  final DocumentSnapshot document;
+  final FirebaseUser user;
 
-//  DetailPostPage({this.document, this.user});
+  DetailPostPage(this.document, this.user);
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +63,7 @@ class DetailPostPage extends StatelessWidget {
             ),
           ),
           Hero(
-            tag: document['photoUrl'],
+            tag: document.documentID,
             child: Image.network(
               document['photoUrl'],
               fit: BoxFit.cover,
@@ -81,16 +79,11 @@ class DetailPostPage extends StatelessWidget {
     );
   }
 
-
   // 팔로우
-  void _follow() {
-
-  }
+  void _follow() {}
 
   // 언팔로우
-  void _unfollow() {
+  void _unfollow() {}
 
-  }
-
-  // 팔로잉 상태를 얻는 스트림
+// 팔로잉 상태를 얻는 스트림
 }
