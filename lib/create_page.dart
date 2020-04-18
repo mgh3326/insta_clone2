@@ -79,12 +79,12 @@ class _CreatePageState extends State<CreatePage> {
     final downloadUrl = await storageTestSnapshot.ref.getDownloadURL();
     // 문서 작성
     await Firestore.instance.collection('post').add({
-      'content': textEditingController.text,
+      'contents': textEditingController.text,
       'displayName': widget.user.displayName,
       'email': widget.user.email,
       'photoUrl': downloadUrl,
       'userPhotoUrl': widget.user.photoUrl
-    }); 
+    });
     // 완료 후 앞 화면으로 이동
     Navigator.pop(context);
   }

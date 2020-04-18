@@ -65,7 +65,7 @@ class DetailPostPage extends StatelessWidget {
                                   );
                                 }
                                 return GestureDetector(
-                                  onTap: _follow,
+                                  onTap: _unfollow,
                                   child: Text(
                                     "언팔로우",
                                     style: TextStyle(
