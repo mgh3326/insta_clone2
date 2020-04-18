@@ -1,13 +1,11 @@
 import 'dart:async';
 
-import 'package:chapter10/root_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import 'tab_page.dart';
 
 class LoginPage extends StatelessWidget {
   // 구글 로그인을 위한 객체
